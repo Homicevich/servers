@@ -1,0 +1,6 @@
+- name: install update, upgrade apt package
+  apt:
+    name: "{{ list_of_package }}"
+    state: present
+    update_cache: yes
+#    upgrade: dist

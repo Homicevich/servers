@@ -1,0 +1,15 @@
+---
+# name: install apt package.
+- include_tasks: "install.yml"
+
+# Fail2Ban
+
+- name: Ensure fail2ban is running and enabled on boot.  service: name=fail2ban state=started enabled=yes
+  when: security_fail2ban_enabled | bool
+
+
+# Autoupdate
+#- include_tasks: autoupdate-Debian.yml
+#  when:
+#    - ansible_os_family == 'Debian'
+#    - security_autoupdate_enabled | bool

@@ -1,0 +1,9 @@
+---
+security_fail2ban_enabled: true
+list_of_package:
+  - tmux
+  - fail2ban
+  - iotop
+  - htop
+  - nano
+  - iftop
